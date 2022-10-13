@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+
+  web:
+
+    image: deepadeepa/backend:003
+
+    volumes:
+
+      - .:/app/
+
+      - /usr/app/node_modules
+
+    ports:
+
+      - "5000:5000"
+
+
+
+  webserver:
+
+    image: deepadeepa/frontendwebproject:002
+
+    ports:
+
+      - "80:80"
